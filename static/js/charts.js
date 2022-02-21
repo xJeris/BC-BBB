@@ -12,7 +12,7 @@ function init() {
         .text(sample)
         .property("value", sample);
     });
-    
+
     // Use the first sample from the list to build the initial plots
     var firstSample = sampleNames[0];
     buildCharts(firstSample);
@@ -58,6 +58,8 @@ function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array. 
+    const selSample = data;
+    console.log(selSample);
 
     // 4. Create a variable that filters the samples for the object with the desired sample number.
 
@@ -82,6 +84,6 @@ function buildCharts(sample) {
      
     };
     // 10. Use Plotly to plot the data with the layout. 
-    
+    Plotly.newPlot("bar", plotData, layout);
   });
 }
