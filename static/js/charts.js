@@ -96,8 +96,8 @@ function buildCharts(sample) {
     var barData = [
       {x: selSampleValue,
       y: yticks,
-      type: "bar",
-      orientation = 'h'}
+      type: 'bar',
+      orientation: 'h'}
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
