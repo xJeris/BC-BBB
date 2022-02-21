@@ -94,13 +94,15 @@ function buildCharts(sample) {
 
     // 8. Create the trace for the bar chart. 
     var barData = [
-      
+      x: selSampleValue,
+      y: yticks,
+      type: "bar"
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-     
+      title: "Top 10 Bacteria Cultures Found",
     };
     // 10. Use Plotly to plot the data with the layout. 
-    //Plotly.newPlot("bar", plotData, layout);
+    Plotly.newPlot("bar", barData, layout);
   });
 }
