@@ -95,7 +95,7 @@ function buildCharts(sample) {
     // 8. Create the trace for the bar chart. 
     var barData = [
       {x: selSampleValue,
-      y: yticks,
+      y: yticks.reverse(),
       type: 'bar',
       orientation: 'h'}
     ];
