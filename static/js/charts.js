@@ -75,7 +75,7 @@ function buildCharts(sample) {
     console.log(firstSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    let selOTUId = firstSample.otu_ids;
+    let selOTUId = "OTU" + firstSample.otu_ids;
     let selOTULabel = firstSample.otu_labels;
     let selSampleValue = firstSample.sample_values;
 
@@ -87,17 +87,19 @@ function buildCharts(sample) {
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
-    var yticks = firstSample.slice(0, 10).map(selOTUId => "OTU " + selOTUId).reverse();
+    var yticks = selOTUId.slice(0, 10).map(selOTUId => selOTUId).reverse();
 
     console.log("Step 7 (top 10 desc): ");
     console.log(yticks);
 
     // 8. Create the trace for the bar chart. 
     var barData = [
-      {x: selSampleValue,
-      y: yticks,
-      type: 'bar',
-      orientation: 'h'}
+      {
+        x: selSampleValue,
+        y: yticks,
+        type: 'bar',
+        orientation: 'h'
+      }
     ];
     // 9. Create the layout for the bar chart. 
     var barLayout = {
