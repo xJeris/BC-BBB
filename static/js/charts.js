@@ -59,17 +59,17 @@ function buildCharts(sample) {
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array. 
     const allSamples = data.samples;
-    console.log("Step 3: ");
+    console.log("Step 3 (allSamples): ");
     console.log(allSamples);
 
     // 4. Create a variable that filters the samples for the object with the desired sample number.
     let selSample = allSamples.filter(selected => selected.id == sample);
-    console.log("Step 4: ");
+    console.log("Step 4 (selSample): ");
     console.log(selSample);
 
     //  5. Create a variable that holds the first sample in the array.
     let firstSample = selSample[0];
-    console.log("Step 5: ");
+    console.log("Step 5 (firstSample): ");
     console.log(firstSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
@@ -77,7 +77,7 @@ function buildCharts(sample) {
     let selOTULabel = firstSample.otu_labels;
     let selSampleValue = firstSample.sample_values;
 
-    console.log("Step 6: ");
+    console.log("Step 6 (firstSample.xxx): ");
     console.log("OTU ID: ", selOTUId);
     console.log("OTU Label: ", selOTULabel);
     console.log("Sample Values: ", selSampleValue);
