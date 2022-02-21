@@ -79,7 +79,7 @@ function buildCharts(sample) {
     let selOTULabel = firstSample.otu_labels;
     let selSampleValue = firstSample.sample_values;
 
-    console.log("Step 6 (firstSample.xxx): ");
+    console.log("Step 6 (firstSample.x): ");
     console.log("OTU ID: ", selOTUId);
     console.log("OTU Label: ", selOTULabel);
     console.log("Sample Values: ", selSampleValue);
@@ -94,7 +94,7 @@ function buildCharts(sample) {
 
     // 8. Create the trace for the bar chart. 
     var barData = [
-      {x: selSampleValue,
+      {x: selSampleValue.reverse(),
       y: yticks.reverse(),
       type: 'bar',
       orientation: 'h'}
