@@ -12,7 +12,6 @@ function init() {
         .text(sample)
         .property("value", sample);
     });
-    console.log(sample);
     
     // Use the first sample from the list to build the initial plots
     var firstSample = sampleNames[0];
