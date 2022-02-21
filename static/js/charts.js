@@ -66,7 +66,8 @@ function buildCharts(sample) {
     console.log(selSample);
 
     //  5. Create a variable that holds the first sample in the array.
-
+    let firstSample = allSamples[0];
+    console.log(firstSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
 
