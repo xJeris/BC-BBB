@@ -91,7 +91,8 @@ function buildCharts(sample) {
     var yticks = selOTUId.slice(0, 10).map(selOTUId => "OTU " + selOTUId).reverse();
 
     console.log("Step 7 (top 10 desc): ");
-    console.log(yticks);
+    console.log("x: ", xticks);
+    console.log("y: ", yticks);
 
     // 8. Create the trace for the bar chart. 
     var barData = [
