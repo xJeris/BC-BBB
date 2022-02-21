@@ -73,9 +73,9 @@ function buildCharts(sample) {
     console.log(firstSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    let selOTUId = selSample.otu_ids;
-    let selOTULabel = selSample.otu_labels;
-    let selSampleValue = selSample.sample_values;
+    let selOTUId = firstSample.otu_ids;
+    let selOTULabel = firstSample.otu_labels;
+    let selSampleValue = firstSample.sample_values;
 
     console.log("Step 6: ");
     console.log("OTU ID: ", selOTUId);
