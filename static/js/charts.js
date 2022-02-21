@@ -62,11 +62,11 @@ function buildCharts(sample) {
     console.log(allSamples);   // all samples
 
     // 4. Create a variable that filters the samples for the object with the desired sample number.
-    let selSample = data.filter(selected => selected.id == mySample);
+    let selSample = dallSamples.filter(selected => selected.id == mySample);
     console.log(selSample);
 
     //  5. Create a variable that holds the first sample in the array.
-    let firstSample = allSamples[0];
+    let firstSample = selSample[0];
     console.log(firstSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
