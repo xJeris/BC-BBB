@@ -62,7 +62,7 @@ function buildCharts(sample) {
     console.log(allSamples);   // all samples
 
     // 4. Create a variable that filters the samples for the object with the desired sample number.
-    let selSample = d3.select("#selDataset").property("value");
+    let selSample = data.filter(selected => selected.id == mySample);
     console.log(selSample);
 
     //  5. Create a variable that holds the first sample in the array.
