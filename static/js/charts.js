@@ -123,7 +123,6 @@ function buildCharts(sample) {
           sizeref: 2,
           sizemode: 'area'
           }
-        }
       }
     ];
 
