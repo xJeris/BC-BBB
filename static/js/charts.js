@@ -115,7 +115,7 @@ function buildCharts(sample) {
     var bubbleData = [
       x: selOTUId,  // otu_ids
       y: selSampleValue,  // sample value
-      z: selOTULabel, // otu labels
+      //z: selOTULabel, // otu labels
       mode = 'markers',
       marker = dict(
         color= ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)'], // Color
