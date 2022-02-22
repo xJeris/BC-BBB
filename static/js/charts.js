@@ -59,6 +59,7 @@ function buildCharts(sample) {
   d3.json("samples.json").then((data) => {
     // 3. Create a variable that holds the samples array.
     const allSamples = data.samples;
+    const freq = data.metadata;
 
     console.log("Step 3 (allSamples): ");
     console.log(allSamples);
@@ -149,9 +150,12 @@ function buildCharts(sample) {
 
     // Gauge Chart section
     // 4. Create the trace for the gauge chart.
+    let selFreq = freq.filter(selected => selected.id == sample);
+    let thisFreq = selFreq[0];
+
     var gaugeData = [
       {
-        value: result['wfreq'],
+        value: thisFreq['wfreq'],
         title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week" },
         type: 'indicator',
         mode: 'gauge+number',
@@ -176,7 +180,7 @@ function buildCharts(sample) {
 
     var config = {responsive: true}
 
-    console.log("last updated: 1:00 PM");
+    console.log("last updated: 1:04 PM");
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot('gauge', gaugeData, gaugeLayout, config);
 
