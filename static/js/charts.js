@@ -116,10 +116,13 @@ function buildCharts(sample) {
       {
         x: selOTUId,  // otu_ids
         y: selSampleValue,  // sample value
+        type: 'scatter',
         mode: 'markers',
         marker: {
-          color: ['blue', 'green', 'brown'],
-          size: [40, 60, 80, 100],
+          //color: ['blue', 'green', 'brown'],
+          colorscale: 'RdBu',
+          showscale: true,
+          size: [200, 400, 600, 800, 1000, 1200],
           sizeref: 2,
           sizemode: 'area'
           }
