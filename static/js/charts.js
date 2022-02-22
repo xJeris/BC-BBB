@@ -119,9 +119,9 @@ function buildCharts(sample) {
       mode = 'markers',
       marker = dict(
         color= ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)'], // Color
-        showscale=True  // Colorscale
+        showscale=True,  // Colorscale
         size=size,  // Size
-        sizemode='area'
+        sizemode='area',
         sizeref= 2.*max(size)/(40.**2)
       )
     ];
