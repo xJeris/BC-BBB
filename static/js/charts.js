@@ -125,6 +125,8 @@ function buildCharts(sample) {
           size: [200, 400, 600, 800, 1000, 1200],
           sizemode: 'area'
           }
+          hovermode: 'closest',
+          hovertemplate: 'OTU: ' + '%{selOTULabel}',
       }
     ];
 
@@ -133,7 +135,7 @@ function buildCharts(sample) {
       title: "Bacteria Cultures Per Sample",
       xaxis: {
         title: {
-          text: 'x Axis'
+          text: 'OTU ID'
         }
       }
     };
