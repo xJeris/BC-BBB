@@ -122,7 +122,7 @@ function buildCharts(sample) {
           colorscale: 'RdBu',
           showscale: true,
           //size: [200, 400, 600, 800, 1000, 1200],
-          //sizemode: 'area'
+          sizemode: 'area'
           },
         text: firstSample.otu_labels
       }
@@ -138,7 +138,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 10:29 AM");
+    console.log("update: 10:30 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
