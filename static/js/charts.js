@@ -57,7 +57,7 @@ function buildMetadata(sample) {
 function buildCharts(sample) {
   // 2. Use d3.json to load and retrieve the samples.json file 
   d3.json("samples.json").then((data) => {
-    // 3. Create a variable that holds the samples array. 
+    // 3. Create a variable that holds the samples array.
     const allSamples = data.samples;
 
     console.log("Step 3 (allSamples): ");
@@ -70,14 +70,14 @@ function buildCharts(sample) {
     console.log(selSample);
 
     //  5. Create a variable that holds the first sample in the array.
-    let firstSample = selSample[0];
+    let thisSample = selSample[0];
     console.log("Step 5 (firstSample): ");
-    console.log(firstSample);
+    console.log(thisSample);
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    let selOTUId = firstSample.otu_ids;
-    let selOTULabel = firstSample.otu_labels;
-    let selSampleValue = firstSample.sample_values;
+    let selOTUId = thisSample.otu_ids;
+    let selOTULabel = thisSample.otu_labels;
+    let selSampleValue = thisSample.sample_values;
 
     console.log("Step 6 (firstSample.x): ");
     console.log("OTU ID: ", selOTUId);
@@ -114,20 +114,20 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
       {
-        x: firstSample['otu_ids'],
-        y: firstSample['sample_values'],
+        x: thisSample['otu_ids'],
+        y: thisSample['sample_values'],
         type: 'scatter',
         mode: 'markers',
         marker: {
-          color: firstSample['otu_ids'],
+          color: thisSample['otu_ids'],
           colorscale: 'RdBu',
           showscale: false,
-          size: firstSample['sample_values'],
+          size: thisSample['sample_values'],
           sizescale: 2,
           sizemode: 'diameter',
           opacity: 0.7
           },
-        text: firstSample.otu_labels
+        text: thisSample.otu_labels
       }
     ];
 
@@ -151,7 +151,7 @@ function buildCharts(sample) {
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
       {
-        value: firstSample['wfreq'],
+        value: result['wfreq'],
         title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week" },
         type: 'indicator',
         mode: 'gauge+number',
@@ -176,7 +176,7 @@ function buildCharts(sample) {
 
     var config = {responsive: true}
 
-    console.log("last updated: 12:55 PM");
+    console.log("last updated: 1:00 PM");
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot('gauge', gaugeData, gaugeLayout, config);
 
