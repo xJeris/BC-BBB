@@ -113,6 +113,7 @@ function buildCharts(sample) {
     // Bubble Chart section
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
+      {
       x: selOTUId,  // otu_ids
       y: selSampleValue,  // sample value
       //z: selOTULabel, // otu labels
@@ -124,6 +125,7 @@ function buildCharts(sample) {
         sizemode='area',
         sizeref= 2.*max(size)/(40.**2)
       )
+      }
     ];
 
     // 2. Create the layout for the bubble chart.
