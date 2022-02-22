@@ -152,7 +152,7 @@ function buildCharts(sample) {
     var gaugeData = [
       {
         value: 6,
-        title: { text: "<strong>Belly Button Washing Frequency</strong><br>Scrubs per Week" },
+        title: { text: "<b>Belly Button Washing Frequency</b><br>Scrubs per Week" },
         type: 'indicator',
         mode: 'gauge+number',
         gauge: {
@@ -174,8 +174,11 @@ function buildCharts(sample) {
       margin: { t: 5, r: 5, l: 5, b: 5 }
     };
 
+    var config = {responsive: true}
+
+    console.log("last updated: 12:44 PM");
     // 6. Use Plotly to plot the gauge data and layout.
-    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout, config);
 
   });
 }
