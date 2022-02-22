@@ -119,11 +119,10 @@ function buildCharts(sample) {
         //z: selOTULabel, // otu labels
         mode: 'markers',
         marker: {
-          color: ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 
-                'rgb(44, 160, 101)', 'rgb(255, 65, 54)'], // Color
-          size: [20, 40, 60, 80],  // Size
-          sizeref: 2.0 * Math.max(...size) / (desired_maximum_marker_size**2),
+          size: [400, 600, 800, 1000],
+          sizeref: 2,
           sizemode: 'area'
+          }
         }
       }
     ];
