@@ -116,7 +116,7 @@ function buildCharts(sample) {
       {
         x: selOTUId,  // otu_ids
         y: selSampleValue,  // sample value
-        type: 'scatter',
+        type: 'heatmap',
         mode: 'markers',
         marker: {
           //color: ['blue', 'green', 'brown'],
@@ -125,8 +125,8 @@ function buildCharts(sample) {
           size: [200, 400, 600, 800, 1000, 1200],
           sizemode: 'area'
           },
-          hovermode: 'closest',
-          hovertemplate: 'OTU: ' + '%{selOTULabel}'
+        hovermode: 'closest',
+        hovertemplate: 'OTU: ' + %{selOTULabel}
       }
     ];
 
