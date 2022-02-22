@@ -150,10 +150,12 @@ function buildCharts(sample) {
     // Gauge Chart section
     // 4. Create the trace for the gauge chart.
     var gaugeData = [
-      value: firstSample.metadata['wfreq'],
-      title: {text: "Scrubs per Week"},
-      type: 'indicator',
-      mode: 'gauge+number'
+      {
+        value: firstSample.metadata['wfreq'],
+        title: {text: "Scrubs per Week"},
+        type: 'indicator',
+        mode: 'gauge+number'
+      }
     ];
     
     // 5. Create the layout for the gauge chart.
