@@ -114,8 +114,8 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
       {
-        x: selOTUId,
-        y: selSampleValue,
+        x: selSample.otu_ids,
+        y: selSample.sample_values,
         mode: 'markers',
         marker: {
           colorscale: 'RdBu',
