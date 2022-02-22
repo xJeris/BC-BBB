@@ -124,9 +124,9 @@ function buildCharts(sample) {
           showscale: false,
           size: [200, 400, 600, 800, 1000, 1200],
           sizemode: 'area'
-          }
+          },
           hovermode: 'closest',
-          hovertemplate: 'OTU: ' + '%{selOTULabel}',
+          hovertemplate: 'OTU: ' + '%{selOTULabel}'
       }
     ];
 
