@@ -140,11 +140,11 @@ function buildCharts(sample) {
         }
       }
       yaxis: {
-        range: [0, 250]
+        range = [0, 250]
       }
     };
 
-    console.log("update: 11:16 AM");
+    console.log("update: 11:19 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
