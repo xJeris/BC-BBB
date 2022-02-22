@@ -116,10 +116,10 @@ function buildCharts(sample) {
       {
         x: selOTUId,  // otu_ids
         y: selSampleValue,  // sample value
-        z: "OTU " + selOTULabel, // otu labels
         mode: 'markers',
         marker: {
-          size: [400, 600, 800, 1000],
+          color: ['blue', 'green', 'brown'],
+          size: [40, 60, 80, 100],
           sizeref: 2,
           sizemode: 'area'
           }
