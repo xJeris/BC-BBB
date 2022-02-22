@@ -172,12 +172,12 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = {
-      margin: { t: 5, r: 5, l: 5, b: 5 }
+      automargin: true
     };
 
     var config = {responsive: true}
 
-    console.log("last updated: 12:48 PM");
+    console.log("last updated: 12:50 PM");
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot('gauge', gaugeData, gaugeLayout, config);
 
