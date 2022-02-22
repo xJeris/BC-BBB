@@ -114,8 +114,8 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
       {
-        x: allSamples.otu_ids,
-        y: allSamples.sample_values,
+        x: firstSample.otu_ids,
+        y: firstSample.sample_values,
         mode: 'markers',
         marker: {
           colorscale: 'RdBu',
@@ -137,7 +137,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 10:16 AM");
+    console.log("update: 10:20 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
