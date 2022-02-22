@@ -144,9 +144,25 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 12:11 PM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
+
+    // Gauge Chart section
+    // 4. Create the trace for the gauge chart.
+    var gaugeData = [
+      value: firstSample.metadata['wfreq'],
+      title: {text: "Scrubs per Week"},
+      type: 'indicator',
+      mode: 'gauge+number'
+    ];
+    
+    // 5. Create the layout for the gauge chart.
+    var gaugeLayout = { 
+     
+    };
+
+    // 6. Use Plotly to plot the gauge data and layout.
+    Plotly.newPlot('gauge', gaugeData, gaugeLayout);
 
   });
 }
