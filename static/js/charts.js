@@ -112,6 +112,7 @@ function buildCharts(sample) {
 
     // Bubble Chart section
     // 1. Create the trace for the bubble chart.
+    var size = [400, 600, 800, 1000];
     var bubbleData = [
       {
         x: firstSample.otu_ids,
@@ -120,8 +121,9 @@ function buildCharts(sample) {
         marker: {
           //color: ['red', 'green', 'blue', 'brown'],
           colorscale: 'RdBu',
-          showscale: true,
-          //size: [200, 400, 600, 800, 1000, 1200],
+          showscale: false,
+          size: size,
+          sizeref = 2.0 * Math.max(...size) / (desired_maximum_marker_size**2),
           sizemode: 'area'
           },
         text: firstSample.otu_labels
@@ -138,7 +140,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 10:30 AM");
+    console.log("update: 10:33 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
