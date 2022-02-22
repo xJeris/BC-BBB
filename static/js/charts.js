@@ -116,7 +116,7 @@ function buildCharts(sample) {
       {
         x: selOTUId,  // otu_ids
         y: selSampleValue,  // sample value
-        type: 'heatmap',
+        //type: 'heatmap',
         mode: 'markers',
         marker: {
           colorscale: 'RdBu',
