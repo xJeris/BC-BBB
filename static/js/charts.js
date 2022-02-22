@@ -150,6 +150,8 @@ function buildCharts(sample) {
 
     // Gauge Chart section
     // 4. Create the trace for the gauge chart.
+
+    // Call metadata so that we can retrieve the washing frequency (wfreq)
     let selFreq = freq.filter(selected => selected.id == sample);
     let thisFreq = selFreq[0];
 
@@ -180,7 +182,6 @@ function buildCharts(sample) {
 
     var config = {responsive: true}
 
-    console.log("last updated: 1:04 PM");
     // 6. Use Plotly to plot the gauge data and layout.
     Plotly.newPlot('gauge', gaugeData, gaugeLayout, config);
 
