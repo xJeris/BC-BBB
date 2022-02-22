@@ -137,14 +137,14 @@ function buildCharts(sample) {
       xaxis: {
         title: {
           text: 'OTU ID'
-        },
-      }
+        }
+      },
       yaxis: {
         range: [0, 250]
       }
     };
 
-    console.log("update: 11:23 AM");
+    console.log("update: 11:24 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
