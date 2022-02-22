@@ -119,7 +119,7 @@ function buildCharts(sample) {
         type: 'scatter',
         mode: 'markers',
         marker: {
-          color: size,
+          color: firstSample['otu_ids'],
           colorscale: 'RdBu',
           showscale: false,
           size: firstSample['sample_values'],
@@ -144,7 +144,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 12:06 PM");
+    console.log("update: 12:11 PM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
