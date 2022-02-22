@@ -123,7 +123,7 @@ function buildCharts(sample) {
           size: [200, 400, 600, 800, 1000, 1200],
           sizemode: 'area'
           },
-        //text: selSample.otu_labels
+        text: firstSample.otu_labels
       }
     ];
 
@@ -137,7 +137,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 10:11 AM");
+    console.log("update: 10:13 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
