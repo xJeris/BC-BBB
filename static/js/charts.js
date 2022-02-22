@@ -114,7 +114,7 @@ function buildCharts(sample) {
     // 1. Create the trace for the bubble chart.
     var bubbleData = [
       {
-        x: selOTUId,  // otu_ids
+        x: selOTULabel,  // otu_ids
         y: selSampleValue,  // sample value
         //type: 'heatmap',
         mode: 'markers',
@@ -124,7 +124,7 @@ function buildCharts(sample) {
           size: [200, 400, 600, 800, 1000, 1200],
           sizemode: 'area'
           },
-        text: "OTU: " + selOTULabel
+        text: "OTU: " + selOTUId
       }
     ];
 
