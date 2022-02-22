@@ -116,7 +116,7 @@ function buildCharts(sample) {
       {
         x: selOTUId,  // otu_ids
         y: selSampleValue,  // sample value
-        //z: selOTULabel, // otu labels
+        z: selOTULabel, // otu labels
         mode: 'markers',
         marker: {
           size: [400, 600, 800, 1000],
