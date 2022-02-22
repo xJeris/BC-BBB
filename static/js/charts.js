@@ -122,7 +122,7 @@ function buildCharts(sample) {
           //color: ['red', 'green', 'blue', 'brown'],
           colorscale: 'RdBu',
           showscale: false,
-          size: firstSample.sample_values,
+          size: firstSample.sample_values*100,
           sizeref: 2,
           sizemode: 'area',
           opacity: 0.5
@@ -141,7 +141,7 @@ function buildCharts(sample) {
       }
     };
 
-    console.log("update: 11:00 AM");
+    console.log("update: 11:02 AM");
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot('bubble', bubbleData, bubbleLayout);
 
