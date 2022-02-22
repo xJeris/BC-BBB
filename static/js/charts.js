@@ -109,5 +109,34 @@ function buildCharts(sample) {
     };
     // 10. Use Plotly to plot the data with the layout. 
     Plotly.newPlot("bar", barData, barLayout);
+
+    // Bubble Chart section
+    // 1. Create the trace for the bubble chart.
+    var bubbleData = [
+      xticksb = selOTUId  // otu_ids
+      yticksb = selSampleValue  // sample value
+      zticksb = selOTULabel // otu labels
+
+      mode = 'markers'
+      marker = dict(
+        color= ['rgb(93, 164, 214)', 'rgb(255, 144, 14)', 'rgb(44, 160, 101)', 'rgb(255, 65, 54)'], // Color
+        showscale=True  // Colorscale
+        size=size,  // Size
+        sizemode='area'
+        sizeref= 2.*max(size)/(40.**2)
+      )
+    ];
+
+    // 2. Create the layout for the bubble chart.
+    var bubbleLayout = {
+      title: "Bacteria Cultures Per Sample",
+      xaxis = dict(
+        title="OTU ID"
+      )
+    };
+
+    // 3. Use Plotly to plot the data with the layout.
+    Plotly.newPlot('bubble', bubbleData, bubbleLayout);; 
+
   });
 }
