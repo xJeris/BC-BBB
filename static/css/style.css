@@ -5,6 +5,10 @@
     background-image: url('../images/jumbotron.jpg');
 }
 
+img {
+    opacity: 0.55;
+}
+
 /* Body background color and font */
 body {
     background-color: darkslategrey;
