@@ -1,0 +1,13 @@
+/* Jumbotron background image */
+.mybanner {
+    color: white;
+    background-size: cover;
+    background-image: url(../BC-BBB/static/images/jumbotron.jpg);
+}
+
+/* Body background color and font */
+body {
+    background-color: blue;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+}
