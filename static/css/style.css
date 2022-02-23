@@ -6,7 +6,7 @@
 }
 
 /* Body background color and font */
-body {
+body, div {
     background-color: darkslategrey;
     font-family:Arial, Helvetica, sans-serif;
 }
