@@ -1,12 +1,18 @@
-/* Jumbotron background image */
+/* Jumbotron*/
 .mybanner {
     color: white;
     background-size: cover;
     background-image: url('../images/jumbotron.jpg');
 }
 
-img {
-    opacity: 0.55;
+.mybanner-overlay {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(0,0,0,0.25);
 }
 
 /* Body background color and font */
