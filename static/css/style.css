@@ -3,6 +3,7 @@
     color: white;
     background-size: cover;
     background-image: url('../images/jumbotron.jpg');
+    z-index: 1;
 
     &::overlay {
         content: "";
@@ -12,6 +13,7 @@
         bottom: 0px;
         left: 0px;
         background-color: rgba(0,0,0,0.25);
+        z-index: 2;
     }
 }
 
