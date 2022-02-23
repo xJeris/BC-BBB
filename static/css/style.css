@@ -2,12 +2,11 @@
 .mybanner {
     color: white;
     background-size: cover;
-    background-image: url(../BC-BBB/static/images/jumbotron.jpg);
+    background-image: url('../BC-BBB/static/images/jumbotron.jpg');
 }
 
 /* Body background color and font */
 body {
-    background-color: blue;
+    background-color: darkslategrey;
     font-family:Arial, Helvetica, sans-serif;
-    color: white;
 }
