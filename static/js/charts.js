@@ -124,9 +124,6 @@ function buildCharts(sample) {
         title: {
           text: 'OTU ID'
         }
-      },
-      yaxis: {
-        //range: [0, 250]
       }
     };
 
