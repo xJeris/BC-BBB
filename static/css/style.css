@@ -3,16 +3,16 @@
     color: white;
     background-size: cover;
     background-image: url('../images/jumbotron.jpg');
-}
 
-.mybanner-overlay {
-    content: "";
-    position: relative;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(0,0,0,0.25);
+    &::overlay {
+        content: "";
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        bottom: 0px;
+        left: 0px;
+        background-color: rgba(0,0,0,0.25);
+    }
 }
 
 /* Body background color and font */
